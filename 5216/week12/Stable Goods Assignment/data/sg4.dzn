@@ -1,0 +1,8 @@
+PERSON = { A, B, C, D, E };
+GOOD =      {   G1, G2, G3, G4 };
+available = [   10, 10, 10, 10 ]; 
+value =     [    5,  4,  3,  2 ];
+npref =     [               4,  1,              4,          3,      2 ];
+good_pref = [  G1, G2, G3, G4, G1, G2, G1, G3, G4, G3, G1, G4, G3, G4 ]; 
+req_pref  = [    6, 6,  6,  6,  6,  6,  4,  6,  6,  6, 6,   5, 10, 10 ];
+

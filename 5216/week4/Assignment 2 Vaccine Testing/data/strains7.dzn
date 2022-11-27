@@ -1,0 +1,11 @@
+VACCINE = { P, V1, V2 };
+placebo = P;
+
+N = 4;
+W = 10;
+
+cost = [ 0, 10, 7, -1, -2 ];
+maxvax = 1;
+
+maxtreat = [ W, 4, 3, 4, 2 ];
+mintreat = [ 0, 0, 2, 2, 1 ]; 

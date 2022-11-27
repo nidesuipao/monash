@@ -1,0 +1,7 @@
+string: _mzn_solution_checker = "@eAGtVFFr2zAQfvevOPRkEzXLuq5sMXnoykYGG4FskAfXBMeWEzFF6iR5tUt+/E6SVy+kYy00\ngkT+vvvuPkt34bIUTcWAGCV+Mb3WrGI1l9xyJc14fy9JGvGHGFsJvjlBn6+0U1ilkWEWVA3+\n8XrxBWbwejw+xSdITDzhkflxwHKxCsJTvBciUWhddJAhRjFh/hBUKmP/zWp2V+iqL7tpqi3D\nYP8g+J4PQoQGUfs43PXKW61qJ7XMWCh3rPwRb5QSmJ8aq7ncTsEk6JvXsAG7YxKsbhgwYRju\nipKt8ShVY2PycblcLKdARiND6wL5BJiseJ1GSN82Fg3UfQXB5Nbu4jaZzbxzGpMAOXstBL/c\ngFQWX/pnw/EuoY/A/LXS+8LGXpokoxG5kSSBVzfH2buXzo5EIUSchSptxnM8St8JNHYf0maD\nnHtpjidHcNODTuNxXxvFpRLNXoIu5BabcgjEaw9xSsM908pbOAB3Gi4r1q6xtfD88keMdYOx\neW+s+58xpzkyptXdqStsyKe68p1CPlx9+3wNnxbLr1ff8V21ZqVFUeie0DBO+3eYp13b5Gnk\nBul9Gs3x520audnAnb++8yp2E0bdfNLsDZrQLpHHoOy3qzxJozAzqMsOF3RyvA4Teul35/4b\neUSGdeYFHrqgZyHmjy6skBGZA7r1DYOFLtMozKb7G3iXRr8BK814kg==\n";
+output ["\"output\": {","\"dzn\": ",showJSON(concat(["x = ",show(x),";\n","y = ",show(y),";\n","spend = ",show(spend),";\n","huibao = ",show(huibao),";\n","profit = ",show(profit),";\n"])),"}, \"sections\": [\"dzn\"]"];
+int: profit:: mzn_check_var;
+int: huibao;
+int: spend;
+array [1..limit] of int: y:: mzn_check_var;
+array [1..limit] of int: x:: mzn_check_var;

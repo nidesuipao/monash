@@ -1,0 +1,11 @@
+resources = [1,1,1,2,1,1];
+horizon = 10;
+norders = 10;
+dist = [50,50,50,150,50,150,50,50,50,50];
+weight = [LIGHT,LIGHT,LIGHT,LIGHT,LIGHT,LIGHT,LIGHT,LIGHT,LIGHT,LIGHT];
+packtime = [1,1,1,1];
+available = [0,0,0,0,0,0,0,0,0,0];
+value = [8,8,8,8,8,8,8,8,8,8];
+ndrones = 4;
+arrival = [0,0,3,4];
+charge  = [10,0,0,5];

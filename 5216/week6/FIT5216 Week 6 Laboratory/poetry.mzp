@@ -1,0 +1,22 @@
+{
+    "builtinSolverConfigs": [
+    ],
+    "openFiles": [
+        "models/poetry.mzn"
+    ],
+    "openTab": 0,
+    "projectFiles": [
+        "data/poetry0.dzn",
+        "data/poetry1.dzn",
+        "data/poetry2.dzn",
+        "data/poetry3.dzn",
+        "data/poetry4.dzn",
+        "data/poetry5.dzn",
+        "models/poetry.mzn",
+        "models/poetry.mzc"
+    ],
+    "projectSolverConfigs": [],
+    "selectedBuiltinConfigId": "org.gecode.gecode",
+    "selectedBuiltinConfigVersion": "6.1.0",
+    "version": 105
+}

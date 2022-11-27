@@ -1,0 +1,46 @@
+{
+    "builtinSolverConfigs": [
+    ],
+    "openFiles": [
+        "models/elephant1.mzn"
+    ],
+    "openTab": 0,
+    "projectFiles": [
+        "data/elephant1_0.dzn",
+        "data/elephant1_1.dzn",
+        "data/elephant1_2.dzn",
+        "data/elephant1_3.dzn",
+        "data/elephant1_4.dzn",
+        "data/elephant1_5.dzn",
+        "data/elephant1_6.dzn",
+        "models/elephant1.mzc",
+        "models/elephant1.mzn"
+    ],
+    "projectSolverConfigs": [
+        {
+            "additionalCompilerCommandline": "",
+            "additionalData": "",
+            "clearOutputWindow": false,
+            "compressSolutionOutput": 100,
+            "defaultBehavior": true,
+            "flatteningStats": false,
+            "freeSearch": false,
+            "id": "org.chuffed.chuffed",
+            "nThreads": 1,
+            "name": "Project solver configuration",
+            "optimizationLevel": 1,
+            "outputTiming": false,
+            "printIntermediate": false,
+            "runSolutionChecker": true,
+            "solverFlags": "",
+            "solvingStats": false,
+            "stopAfter": 1,
+            "timeLimit": 0,
+            "verboseFlattening": false,
+            "verboseSolving": false,
+            "version": "0.9.0"
+        }
+    ],
+    "selectedProjectConfig": 0,
+    "version": 105
+}

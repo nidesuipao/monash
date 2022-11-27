@@ -1,0 +1,8 @@
+PERSON = { BOB, TED, CAROL, ALICE };
+GOOD =      {   TV,   CAR,  HOUSE, BOOK,  CASH, CHAIR, KNIFE, BIKE, RICE };
+available = [    4,     3,      3,  200,  3000,    50,     5,   50,    1 ];
+value =     [  500,   2000, 10000,    2,     1,     4,     4,    2,  100 ];
+npref =     [                                  6,                             5,                                              8,                 3 ];
+good_pref = [ CAR, HOUSE, TV,  CASH, CHAIR, BIKE, CAR,  CASH, BOOK, RICE, CHAIR, HOUSE, TV, CAR, BOOK, CHAIR, BIKE, RICE, KNIFE, HOUSE, CAR,  TV ]; 
+req_pref  = [   2,     2,  2,  2000,     3,    1,   2,  3000,  150,   80,     2,     2,  3,   2,  130,     2,    1,   70,     3, 2,   3,   3 ];
+ 

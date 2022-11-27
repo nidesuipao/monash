@@ -1,0 +1,159 @@
+// ~->[DNET-1]->~
+
+// File created by someone at MonashU using Netica 5.18 on Apr 18, 2021 at 01:06:00.
+
+bnet rental3 {
+AutoCompile = TRUE;
+autoupdate = TRUE;
+whenchanged = 1618671718;
+
+visual V2 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 10;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	windowposn = (28, 28, 921, 603);
+	resolution = 72;
+	drawingbounds = (1899, 950);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0x00C0C0C0;};
+	NodeSet Nature {BuiltIn = 1; Color = 0x00F8EED2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0x00D3CAA6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0x00C8C8C8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0x00FFFFFF;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0x00FFFFB4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0x00FFBDBD;};
+	NodeSet Decision {BuiltIn = 1; Color = 0x00DEE8FF;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0x00F0FAFA;};
+	NodeSet Title {BuiltIn = 1; Color = 0x00FFFFFF;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		magnify = 1;
+		};
+	};
+
+node Interest_rate {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (high, low);
+	parents = ();
+	probs = 
+		// high         low          
+		  (0.5,         0.5);
+	whenchanged = 1618671301;
+	belief = (0.5, 0.5);
+	visual V2 {
+		center = (144, 102);
+		height = 4;
+		};
+	};
+
+node Property_location {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (good, fair, poor);
+	parents = ();
+	probs = 
+		// good         fair         poor         
+		  (0.6,         0.25,        0.15);
+	whenchanged = 1618671317;
+	belief = (0.6, 0.25, 0.15);
+	visual V2 {
+		center = (396, 102);
+		height = 3;
+		};
+	};
+
+node Housing_prices {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (high, low);
+	parents = (Property_location, Interest_rate);
+	probs = 
+		// high         low           // Property_location Interest_rate 
+		  (0.6,         0.4,          // good              high          
+		   0.9,         0.1,          // good              low           
+		   0.4,         0.6,          // fair              high          
+		   0.7,         0.3,          // fair              low           
+		   0.2,         0.8,          // poor              high          
+		   0.5,         0.5);         // poor              low           ;
+	whenchanged = 1618671395;
+	belief = (0.64, 0.36);
+	visual V2 {
+		center = (252, 318);
+		height = 6;
+		};
+	};
+
+node Rent_charged {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (high, low);
+	parents = ();
+	probs = 
+		// high         low          
+		  (0.5,         0.5);
+	numcases = 1;
+	whenchanged = 1618671325;
+	belief = (0.5, 0.5);
+	visual V2 {
+		center = (672, 102);
+		height = 5;
+		};
+	};
+
+node Tenant {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (yes, no);
+	parents = (Rent_charged, Housing_prices, Property_location);
+	probs = 
+		// yes          no            // Rent_charged Housing_prices Property_location 
+		  (0.8,         0.2,          // high         high           good              
+		   0.6,         0.4,          // high         high           fair              
+		   0.3,         0.7,          // high         high           poor              
+		   0.6,         0.4,          // high         low            good              
+		   0.1,         0.9,          // high         low            fair              
+		   0.3,         0.7,          // high         low            poor              
+		   0.95,        0.05,         // low          high           good              
+		   0.8,         0.2,          // low          high           fair              
+		   0.6,         0.4,          // low          high           poor              
+		   0.85,        0.15,         // low          low            good              
+		   0.6,         0.4,          // low          low            fair              
+		   0.4,         0.6);         // low          low            poor              ;
+	whenchanged = 1618671706;
+	belief = (0.695875, 0.304125);
+	visual V2 {
+		center = (546, 318);
+		height = 1;
+		};
+	};
+
+node Desirable_investment {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (yes, no);
+	parents = (Tenant);
+	probs = 
+		// yes          no            // Tenant 
+		  (0.8,         0.2,          // yes    
+		   0.2,         0.8);         // no     ;
+	numcases = 1;
+	whenchanged = 1618671718;
+	belief = (0.617525, 0.382475);
+	visual V2 {
+		center = (864, 318);
+		height = 2;
+		};
+	};
+ElimOrder = (Desirable_investment, Interest_rate, Rent_charged, Housing_prices, Tenant, Property_location);
+};

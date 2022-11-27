@@ -1,0 +1,5 @@
+output ["\"output\": {","\"dzn\": ",showJSON(concat(["x = ",show(x),";\n","y = ",show(y),";\n","u = ",show(u),";\n","v = ",show(v),";\n"])),"}, \"sections\": [\"dzn\"]"];
+int: v;
+int: u;
+int: y;
+int: x;

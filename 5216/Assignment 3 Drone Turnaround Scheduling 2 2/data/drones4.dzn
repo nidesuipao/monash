@@ -1,0 +1,11 @@
+resources = [2,1,1,8,1,2];
+horizon = 15;
+norders = 8;
+dist = [100,30,20,15,20,35,25,150];
+weight = [HEAVY,LIGHT,LIGHT,ULTRA,MEDIUM,LIGHT,HEAVY,HEAVY];
+packtime = [1,2,3,5];
+available = [0,0,3,5,7,5,0,2];
+value = [2,5,3,5,10,8,12,14];
+ndrones = 8;
+arrival = [0,5,10,0,3,7,0,4];
+charge  = [0,10,0,0,4,6,5,6];

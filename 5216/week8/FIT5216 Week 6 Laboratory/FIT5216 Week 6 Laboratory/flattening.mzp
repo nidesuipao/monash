@@ -1,0 +1,59 @@
+{
+    "builtinSolverConfigs": [
+    ],
+    "openFiles": [
+        "models/flat_intro.mzn",
+        "models/flat_exp.mzn",
+        "models/flat_unroll.mzn",
+        "models/flat_2d.mzn",
+        "models/flat_func.mzn"
+    ],
+    "openTab": 0,
+    "projectFiles": [
+        "models/flat_2d.mzn",
+        "models/flat_exp.mzn",
+        "models/flat_func.mzn",
+        "models/flat_intro.mzn",
+        "models/flat_unroll.mzn"
+    ],
+    "projectSolverConfigs": [
+        {
+            "additionalCompilerCommandline": "",
+            "additionalData": "",
+            "clearOutputWindow": false,
+            "compressSolutionOutput": 0,
+            "defaultBehavior": false,
+            "extraOptions": {
+                "-a-d": "2",
+                "-c-d": "8",
+                "-decay": "0.99",
+                "-fail": "0",
+                "-node": "0",
+                "-nogoods": "false",
+                "-nogoods-limit": "128",
+                "-restart": "none",
+                "-restart-base": "1.5",
+                "-restart-scale": "250"
+            },
+            "flatteningStats": true,
+            "freeSearch": false,
+            "id": "org.gecode.gecode",
+            "nThreads": 1,
+            "name": "Project solver configuration",
+            "optimizationLevel": 1,
+            "outputTiming": false,
+            "printIntermediate": true,
+            "runSolutionChecker": true,
+            "solverFlags": "",
+            "solvingStats": false,
+            "stopAfter": 1,
+            "timeLimit": 0,
+            "useExtraOptions": false,
+            "verboseFlattening": false,
+            "verboseSolving": false,
+            "version": "6.1.1"
+        }
+    ],
+    "selectedProjectConfig": 0,
+    "version": 105
+}
